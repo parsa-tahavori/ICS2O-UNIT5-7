@@ -10,18 +10,18 @@
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS20-Unit-5-07-JS/sw.js", {
     scope: "/ICS20-Unit-5-07-JS/",
-  });
+  })
 }
 
 /**
  * Input
  */
 function myButtonClicked() {
-  const numChosen = parseInt(document.getElementById("num").value);
-  let sum = 0;
+  const numChosen = parseInt(document.getElementById("num").value)
+  let sum = 0
 
   for (let counter = 1; counter <= num; counter++) {
-    sum += counter;
+    sum += counter
   }
-  document.getElementById("answer").innerHTML = "The answer is: " + sum;
+  document.getElementById("answer").innerHTML = "The answer is: " + sum
 }
