@@ -1,23 +1,27 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Ava Venturino All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Parsa Tahavori
+// Created on: Dec 2022
 // This file contains the JS functions for index.html
-
-"use strict"
 
 /**
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
-  })
+  navigator.serviceWorker.register("/ICS20-Unit-5-07-JS/sw.js", {
+    scope: "/ICS20-Unit-5-07-JS/",
+  });
 }
 
 /**
- * This function displays an alert.
+ * Input
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  const numChosen = parseInt(document.getElementById("num").value);
+  let sum = 0;
+
+  for (let counter = 1; counter <= num; counter++) {
+    sum += counter;
+  }
+  document.getElementById("answer").innerHTML = "The answer is: " + sum;
 }
